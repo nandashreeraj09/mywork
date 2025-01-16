@@ -10,24 +10,7 @@
     $this->username=DB_USERNAME;
     $this->password=DB_PASSWORD;
     $this->dbmain=DB_DATABASE;
-    
-    // This is for other connection Like Flight, Hotel, Bus, Car, Tour
-    
-   // $this->dbFlight="excuriaksdhfdsfh_service_flight";
-   // $this->dbHotel="excuriaksdhfdsfh_service_hotel"; 
-    
-    //$this->dbHotelCMS="intlksdhfjsdgfhs_hotelcms"; 
-    
-    //  $this->dbCar="excuriaksdhfdsfh_package_car";
-      
-    // $this->dbBus="flyksdhfkjdsfhks_service_bus";
-    
-     // $this->dbServiceTour="intlksdhfjsdgfhs_services_tour";
-      
-   //$this->dbPackageTour="excuriaksdhfdsfh_package_tour";
-    
-    //$this->dbCruise="intlksdhfjsdgfhs_cruise";
-    
+   
     }
     public function getMainConnection()
     {
@@ -239,9 +222,9 @@
            
             try{
               
-               // $dsn="mysql:host='localhost';dbname='palju6zl_master'";
+              
                 
-               $masterConn=new PDO('mysql:host=199.250.214.42;dbname=trackerksdhfkjsd_trackerguru;port=3306','trackerksdhfkjsd_xomin','qy{~pRDkViE!');
+               $masterConn=new PDO('mysql:host=localhost;dbname=db_name;port=3306','db_username','db_password');
               
                 
                 $masterConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -261,9 +244,9 @@
            
             try{
               
-               // $dsn="mysql:host='localhost';dbname='palju6zl_master'";
                 
-                $masterConn1=new PDO('mysql:host=199.250.214.42;dbname=kalapilahisabkit_master;port=3306','kalapilahisabkit_user','f?v5xP~ul*P?');
+                
+                $masterConn1=new  PDO('mysql:host=localhost;dbname=db_name;port=3306','db_username','db_password');
               
                 
                 $masterConn1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -283,9 +266,8 @@
            
             try{
               
-               // $dsn="mysql:host='192.145.234.17';dbname='kinroo5_master'";
-                
-                $masterConn1=new PDO('mysql:host=199.250.214.42;dbname=supportksdhfkjsd_new;port=3306','supportksdhfkjsd_user','@G$8DxB[?WQ5');
+               
+                $masterConn1=new  PDO('mysql:host=localhost;dbname=db_name;port=3306','db_username','db_password');
               
                 
                 $masterConn1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -306,9 +288,8 @@
            
             try{
               
-               // $dsn="mysql:host='192.145.234.17';dbname='kinroo5_master'";
                 
-                $masterConn1=new PDO('mysql:host=199.250.214.42;dbname=affiliatekjshadf_affiliate;port=3306','affiliatekjshadf_useme','O(7N8u*v{z0Z');
+                $masterConn1=new  PDO('mysql:host=localhost;dbname=db_name;port=3306','db_username','db_password');
               
                 
                 $masterConn1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -323,28 +304,7 @@
          
         }
         
-      /*  public function getCrokenConnection()
-        {
-            $crokenConn=null;
-           
-            try{
-              
-               // $dsn="mysql:host='localhost';dbname='palju6zl_master'";
-                
-                $crokenConn=new PDO('mysql:host=localhost;dbname=croip64545j55meg_partners;port=3306','croip64545j55meg_myname','sa$%^dkjh786df8as');
-              
-                
-                $crokenConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $crokenConn->exec('SET CHARACTER SET utf8');
-               return $crokenConn;
-               
-              
-            }catch(PDOException $e)
-            {
-                echo $e->getMessage();
-            }
-         
-        }*/
+      
     }
 
 

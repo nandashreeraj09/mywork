@@ -1,9 +1,5 @@
 <?php  include "top.php";
-if(!isset($_SESSION['tvr_id']) || $_SESSION['tvr_id'] == "" )
-{
-echo "<script>window.location='https://trackerguru.in/';</script>";
-exit;
-}
+ 
 $data = $ch->fetchSingle(NULL,'users',"id='$_SESSION[tvr_id]'");
 $uid = $_SESSION['tvr_id'];
 if(base64_decode($_REQUEST['action'])=='deleteNotes')
@@ -21,9 +17,9 @@ header("Location:new-habit-tracker?red=sucess");
 }
 
 $servername = "localhost";
-$username = "tg2trackerksdhfh_user";
-$password = "@+~oak*IFkzc";
-$dbname = "tg2trackerksdhfh_tracker_guru";
+$username = "";
+$password = "";
+$dbname = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
